@@ -25,7 +25,12 @@
                 background-color: black;
                 color: white;
             }
+            .main{
+                margin-top: 5vh;
+                font-size: 20vw;
+            }
         </style>
+        <div class="main">
         <p>
             <div class="button" onclick="minus(1)">＜</div>
             <span>S</span><span id="scene">0</span>
@@ -41,6 +46,7 @@
             <span>T</span><span id="take">0</span>
             <div class="button" onclick="plus(3)">＞</div>
         </p>
+        </div>
         <div class="reset" onclick="reset()">RESET</div>
         <script>
             var scenes = 1;
