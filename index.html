@@ -20,10 +20,55 @@
                 top: 0;
                 left: 0;
             }
+            .button{
+                background-color: black;
+                color: white;
+            }
         </style>
-        <p><span>S</span><span id="scene"></span></p>
-        <p><span>C</span><span id="cut"></span></p>
-        <p><span>T</span><span id="take"></span></p>
+        <p>
+            <div class="button" onclick="minus(1)">＜</div>
+            <span>S</span><span id="scene">0</span>
+            <div class="button" onclick="plus(1)">＞</div>
+        </p>
+        <p>
+            <div class="button" onclick="minus(2)">＜</div>
+            <span>C</span><span id="cut">0</span>
+            <div class="button" onclick="plus(2)">＞</div>
+        </p>
+        <p>
+            <div class="button" onclick="minus(3)">＜</div>
+            <span>T</span><span id="take">0</span>
+            <div class="button" onclick="plus(3)">＞</div>
+        </p>
         <div class="reset" onclick="reset()">RESET</div>
+        <script>
+            var scenes = 1;
+            var cuts = 1;
+            var takes = 1;
+            function plus(x){
+                if(x == 1){
+                    scenes = scenes + 1;
+                    document.getElementById("scene").textContent = scenes;
+                }else if(x == 2){
+                    cuts = cuts + 1;
+                    document.getElementById("cut").textContent = cuts;
+                }else if(x == 3){
+                    takes = takes + 1;
+                    document.getElementById("take").textContent = takes;
+                }
+            }
+            function minus(x){
+                if(x == 1){
+                    scenes = scenes - 1;
+                    document.getElementById("scene").textContent = scenes;
+                }else if(x == 2){
+                    cuts = cuts - 1;
+                    document.getElementById("cut").textContent = cuts;
+                }else if(x == 3){
+                    takes = takes - 1;
+                    document.getElementById("take").textContent = takes;
+                }
+            }
+        </script>
     </body>
 </html>
